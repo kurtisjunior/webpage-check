@@ -1,8 +1,14 @@
 body {
-  background: black;
 }
 
 div {
   color: red;
-  background: grey;
+}
+
+.top-nav {
+  margin-top: 5%;
+}
+
+.second {
+  margin-top: 10%;
 }
