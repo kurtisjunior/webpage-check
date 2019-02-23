@@ -1,5 +1,6 @@
 onSubmit = e => {
   event.preventDefault();
-  console.log(e.value);
+  const url = e.value;
+  makeGetRequest(url);
   document.getElementById("url-form").reset();
 };
