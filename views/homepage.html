@@ -11,7 +11,6 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="homePage.css" />
   </head>
   <body>
@@ -55,10 +54,7 @@
       <div class="row justify-content-center">
         <div class="col second">
           <div class="style">
-            <form
-              onsubmit="onSubmit(document.getElementById('form-value'))"
-              id="url-form"
-            >
+            <form action="/api/result" method="get" id="url-form">
               <div class="form-group">
                 <label for="exampleInputEmail1">URL </label>
                 <input
@@ -67,6 +63,7 @@
                   id="form-value"
                   placeholder="Enter web page address"
                   value=""
+                  name="url"
                 />
                 <small id="emailHelp" class="form-text text-muted"
                   >The page anlaysis will follow</small
