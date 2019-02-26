@@ -55,20 +55,23 @@
         <div class="col second">
           <div class="style">
             <form action="/api/result" method="get" id="url-form">
-              <div class="form-group">
-                <label for="exampleInputEmail1">URL </label>
+              <label for="basic-url">Please enter a valid URL</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3"
+                    >www.arsenal.com</span
+                  >
+                </div>
                 <input
                   type="text"
+                  name="url"
+                  value=""
                   class="form-control"
                   id="form-value"
-                  placeholder="Enter web page address"
-                  value=""
-                  name="url"
+                  aria-describedby="basic-addon3"
                 />
-                <small id="emailHelp" class="form-text text-muted"
-                  >The page anlaysis will follow</small
-                >
               </div>
+
               <button type="submit" class="btn btn-primary">
                 Submit
               </button>
