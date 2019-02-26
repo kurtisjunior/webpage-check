@@ -2,7 +2,7 @@ const cheerio = require("cheerio");
 
 const formatingObj = {
   findTitle: function findTitle(res) {
-    const html = res.text;
+    // const html = res.text;
     const $ = cheerio.load(res);
 
     let title = $.html("title");
@@ -13,7 +13,23 @@ const formatingObj = {
     title = title.replace(regexEnd, "");
     return title;
   },
-  findLinks: function findLinks() {}
+  findLinks: function findLinks(res) {
+    const $ = cheerio.load(res);
+    let links = $.html("a");
+    links = links.match(/<a[^>]*>([^<]+)<\/a>/g);
+
+    const linksAndUnique = links => {
+      const finalArr = [];
+      const unique = [];
+      links.forEach(ref => {
+        if (!unique.includes(ref)) unique.push(ref);
+      });
+      finalArr.push(links.length);
+      finalArr.push(unique.length);
+      return finalArr;
+    };
+    return linksAndUnique(links);
+  }
 };
 
 module.exports = formatingObj;

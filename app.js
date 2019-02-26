@@ -21,8 +21,8 @@ module.exports = app;
 /*
 App should:
 1. get the title X
-2. get the number of links on page
-3. number of unique domains the links go to
+2. get the number of links on page X
+3. number of unique domains the links go to X
 4. whether the page was served securely
 5. check if google analytics was used 
 */
