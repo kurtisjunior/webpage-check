@@ -20,7 +20,7 @@ module.exports = app;
 
 /*
 App should:
-1. get the title
+1. get the title X
 2. get the number of links on page
 3. number of unique domains the links go to
 4. whether the page was served securely

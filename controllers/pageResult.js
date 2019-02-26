@@ -1,5 +1,5 @@
 const request = require("superagent");
-const findTitle = require("../utils/formatting");
+const formatingObj = require("../utils/formatting");
 
 exports.pageResult = (req, res, next) => {
   const url = req.query.url;
@@ -7,8 +7,8 @@ exports.pageResult = (req, res, next) => {
   return request
     .get(url)
     .then(res => {
-      const title = findTitle(res.text);
-      console.log(title);
+      const title = formatingObj.findTitle(res.text);
+      const links = formatingObj.findLinks(res.text);
     })
     .catch(err => {
       console.log(err);
